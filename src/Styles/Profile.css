@@ -1,0 +1,264 @@
+.profile-page {
+  min-height: calc(100vh - 100px);
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+}
+
+.profile-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.not-authenticated {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-auth-content {
+  text-align: center;
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.not-auth-content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 30px;
+}
+
+.not-auth-content button {
+  padding: 14px 40px;
+  background: linear-gradient(135deg, #111, #333);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.not-auth-content button:hover {
+  box-shadow: 0 10px 30px rgba(17, 17, 17, 0.3);
+}
+
+.profile-header {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 40px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 900;
+  color: #111;
+  flex-shrink: 0;
+}
+
+.profile-info h1 {
+  font-size: 28px;
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.profile-info p {
+  color: #666;
+  font-size: 14px;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.profile-section {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.profile-section h2 {
+  font-size: 20px;
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #eee;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.info-item label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.info-item p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+}
+
+.orders-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.order-card {
+  border: 2px solid #eee;
+  padding: 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.order-card:hover {
+  border-color: #ffd700;
+  box-shadow: 0 5px 20px rgba(255, 215, 0, 0.1);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.order-id {
+  font-weight: 700;
+  color: #111;
+}
+
+.order-status {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.order-date {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.order-amount {
+  font-size: 18px;
+  font-weight: 900;
+  color: #ffd700;
+}
+
+.no-orders {
+  text-align: center;
+  padding: 40px;
+}
+
+.no-orders p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.no-orders button {
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #111, #333);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.no-orders button:hover {
+  box-shadow: 0 10px 30px rgba(17, 17, 17, 0.3);
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.action-btn {
+  padding: 16px;
+  background: linear-gradient(135deg, #f9f9f9, #f0f0f0);
+  border: 2px solid #eee;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.action-btn:hover {
+  background: white;
+  border-color: #ffd700;
+}
+
+.action-btn.logout {
+  background: #ffebee;
+  border-color: #ffcdd2;
+  color: #c62828;
+}
+
+.action-btn.logout:hover {
+  background: #ffcdd2;
+}
+
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 40px 20px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .orders-list {
+    grid-template-columns: 1fr;
+  }
+
+  .actions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-section {
+    padding: 20px;
+  }
+}

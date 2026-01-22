@@ -1,0 +1,111 @@
+.not-found-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #111 0%, #2a2a2a 100%);
+}
+
+.not-found-container {
+  text-align: center;
+  max-width: 600px;
+}
+
+.error-code {
+  font-size: 140px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+  letter-spacing: 10px;
+}
+
+.not-found-container h1 {
+  font-size: 48px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.not-found-container p {
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.btn-home,
+.btn-shop {
+  padding: 14px 35px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-home {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #111;
+}
+
+.btn-home:hover {
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-shop {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-shop:hover {
+  background: white;
+  color: #111;
+  transform: translateY(-2px);
+}
+
+.error-visual {
+  font-size: 100px;
+  opacity: 0.5;
+}
+
+@media (max-width: 480px) {
+  .error-code {
+    font-size: 80px;
+    letter-spacing: 5px;
+  }
+
+  .not-found-container h1 {
+    font-size: 28px;
+  }
+
+  .not-found-container p {
+    font-size: 14px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn-home,
+  .btn-shop {
+    width: 100%;
+  }
+}

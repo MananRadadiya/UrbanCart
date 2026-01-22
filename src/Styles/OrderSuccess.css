@@ -1,0 +1,31 @@
+.success-page {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.success-page h1 {
+  font-size: 42px;
+}
+
+.success-page p {
+  margin: 10px 0 20px;
+  color: #555;
+}
+
+.home-btn {
+  padding: 14px 36px;
+  border-radius: 30px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.home-btn:hover {
+  background: #ffb400;
+  color: #111;
+}
