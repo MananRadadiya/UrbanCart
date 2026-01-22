@@ -7,8 +7,9 @@ import "../Styles/Checkout.css";
 
 function Checkout() {
   const { cart, totalAmount, clearCart } = useContext(CartContext);
-  const { user, isAuthenticated, addOrder } = useContext(AuthContext);
+  const { isAuthenticated, addOrder } = useContext(AuthContext);
   const navigate = useNavigate();
+
 
   const [formData, setFormData] = useState({
     fullName: "",

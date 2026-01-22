@@ -1,20 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-export const useFetch = (url, dependencies = []) => {
+export const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      setError(null);
+    if (!url) return;
 
+    const fetchData = async () => {
       try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const result = await response.json();
-        setData(result);
+        setLoading(true);
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const json = await res.json();
+        setData(json);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -22,10 +22,8 @@ export const useFetch = (url, dependencies = []) => {
       }
     };
 
-    if (url) {
-      fetchData();
-    }
-  }, [url, ...dependencies]);
+    fetchData();
+  }, [url]);
 
   return { data, loading, error };
 };
