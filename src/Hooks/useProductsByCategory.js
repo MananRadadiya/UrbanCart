@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getAllProducts } from "../Services/ProductService";
 import { getProductsByUICategory } from "../Utils/categoryNormalizer";
 
+// Cache
 let productCache = null;
 let cachePromise = null;
 
@@ -14,9 +15,12 @@ export const useProductsByCategory = (categoryId = null) => {
     const fetchData = async () => {
       try {
         setLoading(true);
+        setError(null);
 
         if (!productCache) {
-          if (!cachePromise) cachePromise = getAllProducts(200);
+          if (!cachePromise) {
+            cachePromise = getAllProducts(200);
+          }
           const result = await cachePromise;
           productCache = result.products || [];
         }
@@ -28,6 +32,7 @@ export const useProductsByCategory = (categoryId = null) => {
         setProducts(filtered);
       } catch (err) {
         setError(err.message);
+        setProducts([]);
       } finally {
         setLoading(false);
       }
@@ -37,4 +42,10 @@ export const useProductsByCategory = (categoryId = null) => {
   }, [categoryId]);
 
   return { products, loading, error };
+};
+
+// ✅ ADD THIS EXPORT (THIS FIXES THE BUILD)
+export const clearProductCache = () => {
+  productCache = null;
+  cachePromise = null;
 };
